@@ -1,1 +1,293 @@
+/* 調整用スタイル */
+
+html {
+  font-size: 100%; /*ユーザー設定の文字サイズを正しく反映*/
+  font: Noto Sans Light;
+}
+
+body {
+  background-color: #fff;
+  color: #3D3939;
+  font-size: 0.875rem;
+  margin:0;
+  padding:0;
+}
+
+a {
+  text-decoration: none;
+  color: #3D3939;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+img{
+  width: 100%; /*画像が親要素からはみ出すのを防ぐ*/
+  height: auto;
+}
+
+main {
+  background-color: #fff;
+  display: flex;
+}
+
+
+.main {
+  margin: auto;
+  margin-top: 60px;
+}
+
+.footer {
+  background-color: #3D3939;
+  color: #fff;
+  padding: 0.4%;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.footer div {
+  margin: auto;
+}
+
+
+/* ヘッダー */
+
+
+.header {
+  background-color: #3D3939;
+  width: 100%;
+  height: 50px;
+  padding: 0.4%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.header__inner {
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: inherit;
+  position: relative;
+}
+
+
+/* ヘッダーのロゴ部分 */
+.header__title {
+  width: 300px;
+}
+
+
+@media screen and (min-width: 960px) {
+  .header__title {
+    width: 300px;
+  }
+}
+
+.header__title img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* ヘッダーのナビ部分 */
+
+.header__nav {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  transform: translateX(100%);
+  background-color: #3D3939;
+  transition: ease .4s;
+}
+
+
+@media screen and (min-width: 960px) {
+  .header__nav {
+    position: static;
+    transform: initial;
+    background-color: inherit;
+    height: inherit;
+    display: flex;
+    justify-content: end;
+    width: 50%;
+  }
+}
+
+
+@media screen and (min-width: 960px) {
+  .nav__items {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: initial;
+    justify-content: space-between;
+  }
+}
+
+.nav-items {
+  padding-top: 250px;
+  padding-bottom: 200px;
+}
+
+
+@media screen and (min-width: 960px) {
+  .nav-items {
+    padding-top: inherit;
+    padding-bottom: inherit;
+  }
+}
+
+.nav-items__item li {
+  margin-left: 30px;
+}
+
+/* ナビのリンク */
+.nav-items__item a {
+  color: #fff;
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 0.875rem;
+  margin-bottom: 24px;
+}
+
+.nav-items__item:last-child a {
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 960px) {
+  .nav-items__item a {
+    margin-bottom: 0;
+  }
+}
+
+
+/* ハンバーガーメニュー */
+
+.header__hamburger {
+  width: 48px;
+  height: 100%;
+
+}
+
+.hamburger {
+  background-color: transparent;
+  border-color: transparent;
+  z-index: 9999;
+}
+
+@media screen and (min-width: 960px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+/* ハンバーガーメニューの線 */
+.hamburger span {
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+  position: relative;
+  transition: ease .4s;
+  display: block;
+}
+
+.hamburger span:nth-child(1) {
+  top: 0;
+}
+
+.hamburger span:nth-child(2) {
+  margin: 8px 0;
+}
+
+.hamburger span:nth-child(3) {
+  top: 0;
+}
+
+
+/* ハンバーガーメニュークリック後のスタイル */
+.header__nav.active {
+  transform: translateX(0);
+}
+
+.hamburger.active span:nth-child(1) {
+  top: 5px;
+  transform: rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+
+}
+
+.hamburger.active span:nth-child(3) {
+  top: -13px;
+  transform: rotate(-45deg);
+}
+
+h2 {
+  font-size: 2rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#lectureship {
+  margin-bottom: 20px;
+}
+
+.slide {
+  width: 1100px;
+  margin: 0 auto;
+  display: block;
+}
+
+.slide-items {
+  width: 100%;
+  display: flex;
+  margin: auto;
+}
+
+.slide-items li {
+  height: auto;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.slide-items img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+@media screen and (min-width: 960px) {
+  .slide-items img {
+    max-width: 100%;
+  }
+}
+
+.news-list li a {
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
