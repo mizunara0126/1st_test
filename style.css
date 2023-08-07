@@ -2,13 +2,13 @@
 
 html {
   font-size: 100%; /*ユーザー設定の文字サイズを正しく反映*/
-  font: Noto Sans Light;
 }
 
 body {
   background-color: #fff;
   color: #3D3939;
   font-size: 0.875rem;
+  font-family: 'Noto Sans JP', sans-serif;
   margin:0;
   padding:0;
 }
