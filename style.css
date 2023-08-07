@@ -257,6 +257,12 @@ h2 {
   display: block;
 }
 
+@media screen and (min-width: 480px) {
+  .slide {
+    width: 500px;
+  }
+}
+
 .slide-items {
   width: 100%;
   display: flex;
